@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2023-12-27T20:15:01.397Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.11 Chrome/114.0.5735.289 Electron/25.9.8 Safari/537.36" etag="QcZRk-9Zh0YvNWqBYqtb" version="22.1.11" type="device">
+  <diagram name="Страница — 1" id="K1GuHLXQaXbjNu8LGzyw">
+    <mxGraphModel dx="1036" dy="1775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-1" target="RN7eBIJX6i_Hp72XLPzO-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-1" value="Н_ЛЮДИ&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="440" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-2" target="RN7eBIJX6i_Hp72XLPzO-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-2" value="Н_СЕССИЯ&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="440" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-3" target="RN7eBIJX6i_Hp72XLPzO-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-3" value="⋈&lt;br&gt;Н_ЛЮДИ.ИД = Н_СЕССИЯ.ЧЛВК_ИД" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="360" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-7" target="RN7eBIJX6i_Hp72XLPzO-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-7" value="σ&lt;br&gt;Н_ЛЮДИ.ИМЯ &amp;lt; &#39;Николай&#39;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-8" target="RN7eBIJX6i_Hp72XLPzO-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-8" value="σ&lt;br&gt;Н_СЕССИЯ.ДАТА &amp;lt;= &#39;2004-01-17&#39;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="RN7eBIJX6i_Hp72XLPzO-12" target="RN7eBIJX6i_Hp72XLPzO-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-12" value="π&amp;nbsp;&lt;br&gt;Н_ЛЮДИ.ИД,&amp;nbsp;&lt;br&gt;Н_СЕССИЯ.ИД" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RN7eBIJX6i_Hp72XLPzO-13" value="Результат" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="-40" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
