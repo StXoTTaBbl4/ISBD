@@ -1,0 +1,21 @@
+body{
+    background-color: #1c1c1c;
+}
+header{
+    background-color: #242629;
+    height: 80px;
+    width: 100%;
+    font-family: Tahoma, serif;
+    color: whitesmoke;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+#header-name{
+    font-size: 35px;
+}
+#header-time{
+    font-size: 15px;
+}

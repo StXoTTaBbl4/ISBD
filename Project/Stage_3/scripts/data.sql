@@ -6,7 +6,7 @@ VALUES
 ('Bob Johnson', 3, '789 Elm Rd', 204),
 ('David Wilson', 5, '876 Cedar Dr', 205);
 
-INSERT INTO TABLE death_data (body_id, date_of_death, description_document_id)
+INSERT INTO death_data (body_id, date_of_death, description_document_id)
 VALUES
 (1, '2023-05-15', 301),
 (2, '2023-08-20', 302),
@@ -30,7 +30,7 @@ VALUES
 (4,'Pathological study', 407, 408, 504),
 (5,'Medical examination', 409, 410, 505);
 
-INSERT INTO relative_data INSERT INTO relative_data (name, second_name, phone_number, passport_id, address, to_whom_ID)
+INSERT INTO relative_data (name, second_name, phone_number, passport_id, address, to_whom_ID)
 VALUES
 ('Mary', 'Johnson', '123-456-7890', 'AB1234567', '456 Oak St', 1),
 ('Michael', 'Smith', '987-654-3210', 'CD9876543', '789 Elm Ave', 2),
@@ -38,7 +38,7 @@ VALUES
 ('Daniel', 'Williams', '333-999-8888', 'GH3338888', '890 Cedar Rd', 4),
 ('Olivia', 'Davis', '777-888-9999', 'IJ7779999', '567 Maple Dr', 5);
 
-INSERT INTO personal_data  (name, second_name, phone_number, passport_id)
+INSERT INTO personal_data (name, second_name, phone_number, passport_id)
 VALUES
 ('John', 'Doe', '123-456-7890', 'AB1234567'),
 ('Jane', 'Smith', '987-654-3210', 'CD9876543'),
