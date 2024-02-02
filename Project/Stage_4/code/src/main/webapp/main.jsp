@@ -23,9 +23,7 @@
     </header>
 <span id="search-button"></span>
 <span id="account-button"></span>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+
+
 </body>
 </html>
