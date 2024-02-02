@@ -1,12 +1,12 @@
-package com.nullproject.app;
+package com.nullproject.app.Servlets;
 
 import java.io.*;
 
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "controllerServlet", value = "/controller")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "controllerServlet", value = "/controller-servlet")
+public class ControllerServlet extends HttpServlet {
     private String message;
 
     public void init() {
