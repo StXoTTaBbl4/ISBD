@@ -1,6 +1,12 @@
+html{
+    height: 100%;
+}
 body{
     background-color: #1c1c1c;
+    height: calc(100% - 1em);
+    margin-top: 80px;
 }
+
 header{
     background-color: #242629;
     height: 80px;
@@ -18,4 +24,44 @@ header{
 }
 #header-time{
     font-size: 15px;
+}
+#wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+#available-info{
+    float:left; /* add this */
+    width: 80%;
+    height: 100%;
+}
+#available-info-header{
+    text-align: center;
+    font-family: Tahoma, serif;
+    font-size: 35px;
+    color: whitesmoke;
+    width: 100%;
+    padding-bottom: 20px;
+    border: thin none black;
+    border-bottom-style: solid;
+}
+#available-info-body{
+    width: 100%;
+    height: 100%;
+}
+.available-info-personal{
+    font-size: 30px;
+    border: thin none #D74632;
+    border-bottom-style: solid;
+}
+#sidebar{
+    float: left; /* add this */
+    width: 19%;
+    height: 100%;
+    border: thin none black;
+    border-left-style: solid;
 }

@@ -2,14 +2,20 @@ package com.nullproject.app.Entries;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "funeral_services_acc_data")
+@Entity(name = "funeral_services_acc_data")
+@Table(name = "funeral_services_acc_data", schema = "s262512")
 public class FuneralServicesAccData {
+    public FuneralServicesAccData(int id, String login, String password, Integer person_id) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.person_id = person_id;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
-    private Long id;
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "login", nullable = false, length = 64)
     private String login;
@@ -20,13 +26,17 @@ public class FuneralServicesAccData {
     @Column(name = "personid", nullable = false)
     private Integer person_id;
 
+    public FuneralServicesAccData() {
+
+    }
+
     // геттеры и сеттеры
 
-    public Long id() {
+    public Integer id() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -52,6 +62,16 @@ public class FuneralServicesAccData {
 
     public void setPerson_id(Integer person_id) {
         this.person_id = person_id;
+    }
+
+    @Override
+    public String toString() {
+        return "FuneralServicesAccData{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", person_id=" + person_id +
+                '}';
     }
 }
 

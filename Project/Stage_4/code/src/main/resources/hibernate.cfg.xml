@@ -7,10 +7,9 @@
     <session-factory>
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:7613/</property>
-        <property name="hibernate.connection.username"></property>
-        <property name="hibernate.connection.password"></property>
-
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:7613/studs</property>
+        <property name="hibernate.connection.username">s262512</property>
+        <property name="hibernate.connection.password">8IhU41HR5USTTePn</property>
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- Print executed SQL to stdout -->
@@ -19,6 +18,5 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- Annotated entity classes -->
         <property name="hibernate.current_session_context_class">thread</property>
-
     </session-factory>
 </hibernate-configuration>

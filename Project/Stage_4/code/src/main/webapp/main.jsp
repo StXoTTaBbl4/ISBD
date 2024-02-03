@@ -21,9 +21,26 @@
         %>
         </a>
     </header>
+    <div id="wrapper">
+        <div id="available-info">
+            <div id="available-info-header">
+                Доступные для вас записи:
+            </div>
+            <div id="available-info-body">
+                <div class="available-info-personal">
+                    <span>Имя:</span>
+                    <span>Фамилия:</span>
+                    <span>Паспорт:</span>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar">123</div>
+    </div>
 <span id="search-button"></span>
 <span id="account-button"></span>
 
 
 </body>
+<script src="JS/jquery-3.7.1.min.js"></script>
+<script src="JS/main.js"></script>
 </html>

@@ -92,14 +92,13 @@ VALUES
 ('Emily', 'Johnson', TRUE, 3),
 ('Benjamin', 'Hall', FALSE, 4),
 ('Abigail', 'Jones', TRUE, 5);
-
-INSERT INTO funeral_services_acc_data (login, password)
+INSERT INTO funeral_services_acc_data (login, password, personid)
 VALUES
-('john.doe@example.com', 'hashed_password_1'),
-('jane.smith@example.com', 'hashed_password_2'),
-('bob.johnson@example.com', 'hashed_password_3'),
-('alice.brown@example.com', 'hashed_password_4'),
-('david.wilson@example.com', 'hashed_password_5');
+('mary.doe@example.com', 'hashed_password_1', 1),
+('michael.smith@example.com', 'hashed_password_2', 2),
+('emily.johnson@example.com', 'hashed_password_3', 3),
+('daniel.brown@example.com', 'hashed_password_4', 4),
+('olivia.wilson@example.com', 'hashed_password_5', 5);
 
 INSERT INTO graveyard_info (address, funeral_date, plot_number, body_id)
 VALUES

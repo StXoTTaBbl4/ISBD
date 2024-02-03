@@ -9,6 +9,7 @@
 <body>
 
 <form>
+    <div id="error"></div>
     <label for="login">Login</label>
     <input type="text" id="login" name="login" required>
     <label for="password">Password</label>
@@ -16,7 +17,6 @@
     <br>
     <button id="login-button" type="button">Enter</button>
 </form>
-<div id="error"></div>
 
 </body>
 <script src="JS/jquery-3.7.1.min.js"></script>

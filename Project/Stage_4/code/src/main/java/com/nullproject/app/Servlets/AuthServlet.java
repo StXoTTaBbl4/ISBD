@@ -1,6 +1,5 @@
 package com.nullproject.app.Servlets;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.nullproject.app.Entries.FuneralServicesAccData;
@@ -14,19 +13,18 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.io.*;
-import java.util.ArrayList;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
-
 @WebServlet(name = "authServlet", value = "/auth-servlet")
 public class AuthServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
-//        HibernateUtil hibernateUtil = new HibernateUtil();
-//        hibernateUtil.connection();
-//        Session session = hibernateUtil.session();
-//        Transaction transaction = hibernateUtil.transaction();
+        HibernateUtil hibernateUtil = new HibernateUtil();
+        hibernateUtil.connection();
+        Session session = hibernateUtil.session();
+        Transaction transaction = hibernateUtil.transaction();
 
         StringBuilder buffer = new StringBuilder();
         BufferedReader reader = request.getReader();
@@ -35,34 +33,40 @@ public class AuthServlet extends HttpServlet {
             buffer.append(line);
             buffer.append(System.lineSeparator());
         }
-
         JsonObject data = JsonParser.parseString(buffer.toString()).getAsJsonObject();
         System.out.println(data);
 
-        response.getWriter().println("response");
 
+        try {
+            transaction.begin();
+            Query query = session.createNativeQuery("SELECT * FROM funeral_services_acc_data where login =? and password=?", FuneralServicesAccData.class);
+            query.setParameter(1, data.get("login").toString().replace("\"",""));
+            query.setParameter(2, data.get("password").toString().replace("\"",""));
 
-//        try {
-//            transaction.begin();
-//            Query query = session.createQuery( "FROM FuneralServicesAccData where login = ", FuneralServicesAccData.class);
-//            List<FuneralServicesAccData> entries = query.getResultList();
-//            transaction.commit();
-//            //System.out.println("Reading student records..." + "Length of elements: " + entries.size() + " Hit 1 elem: " + entries.get(0).getHitResult());
-//        } catch (RuntimeException exception) {
-//            if (transaction.isActive()) {
-//                transaction.rollback();
-//            }
-//            throw exception;
-//        }catch (Exception e){
-//            PrintStream printStream;
-//            try {
-//                printStream = new PrintStream(System.out, true, "UTF-8");
-//            } catch (UnsupportedEncodingException ex) {
-//                throw new RuntimeException(ex);
-//            }
-//            printStream.println(e);
-//            throw e;
-//        }
+            List<FuneralServicesAccData> entries = query.getResultList();
+            transaction.commit();
+            for (FuneralServicesAccData f: entries
+                 ) {
+                System.out.println(f.toString());
+            }
+            if (entries.isEmpty()){
+                response.sendError(404);
+            }
+            else{
+                response.setContentType("text/html");
+                response.getWriter().println(entries.get(0).person_id());
+            }
+        } catch (RuntimeException exception) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            throw exception;
+        }catch (Exception e){
+            //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q
+            PrintStream printStream;
+            printStream = new PrintStream(System.out, true, StandardCharsets.UTF_8);
+            printStream.println(e);
+            throw e;
+        }
     }
-
 }
