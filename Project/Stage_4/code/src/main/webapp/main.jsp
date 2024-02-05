@@ -27,17 +27,18 @@
             <div id="available-info-header">
                 Your data:
             </div>
-            <div id="available-info-body">
-
-            </div>
+            <div id="available-info-body"></div>
             <button id="available-info-change-button" class="button">Change</button>
         </div>
         <div id="sidebar">
             <div id="sidebar-header">
                 Menu
             </div>
-
-
+            <div id="sidebar-buttons">
+                <button id="sidebar-button-info" class="button sidebar-button">Info</button><br>
+                <button id="sidebar-button-address" class="button sidebar-button">Addresses</button><br>
+                <button id="sidebar-button-employers" class="button sidebar-button">Workers</button>
+            </div>
         </div>
     </div>
 </body>

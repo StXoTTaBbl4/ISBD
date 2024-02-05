@@ -2,13 +2,20 @@
     border: none;
     color: white;
     padding: 15px 32px;
+    width: 200px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     margin: 4px 2px;
     cursor: pointer;
-}
-#available-info-change-button{
     background-color: #D74632;
+
+}
+.button:hover{
+    background-color: #D72500;
+}
+.sidebar-button{
+ !important;
+    width: 100%;
 }

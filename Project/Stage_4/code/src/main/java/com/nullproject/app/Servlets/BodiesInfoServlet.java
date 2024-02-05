@@ -27,29 +27,27 @@ public class BodiesInfoServlet extends HttpServlet {
         Session session = hibernateUtil.session();
         Transaction transaction = hibernateUtil.transaction();
 
-        System.out.println("Валя гей");
-
-        try{
-            transaction.begin();
-            Query query = session.createNativeQuery("SELECT * FROM relative_data where personid =?", RelativeData.class);
-            query.setParameter(1, Integer.parseInt(req.getParameter("personID").replace("\"","")));
-
-            List<RelativeData> entry = query.getResultList();
-            transaction.commit();
-            Gson gson = new Gson();
-            resp.getWriter().println(gson.toJson(entry.get(0)));
-        }catch (RuntimeException e){
-            e.printStackTrace();
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-        }catch (Exception e){
-            //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q
-            PrintStream printStream;
-            printStream = new PrintStream(System.out, true, StandardCharsets.UTF_8);
-            printStream.println(e);
-            throw e;
-        }
+//        try{
+//            transaction.begin();
+//            Query query = session.createNativeQuery("SELECT * FROM relative_data where personid =?", RelativeData.class);
+//            query.setParameter(1, Integer.parseInt(req.getParameter("personID").replace("\"","")));
+//
+//            List<RelativeData> entry = query.getResultList();
+//            transaction.commit();
+//            Gson gson = new Gson();
+//            resp.getWriter().println(gson.toJson(entry.get(0)));
+//        }catch (RuntimeException e){
+//            e.printStackTrace();
+//            if (transaction.isActive()) {
+//                transaction.rollback();
+//            }
+//        }catch (Exception e){
+//            //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q
+//            PrintStream printStream;
+//            printStream = new PrintStream(System.out, true, StandardCharsets.UTF_8);
+//            printStream.println(e);
+//            throw e;
+//        }
 
 
     }
@@ -61,30 +59,30 @@ public class BodiesInfoServlet extends HttpServlet {
         Session session = hibernateUtil.session();
         Transaction transaction = hibernateUtil.transaction();
 
-        try {
-            transaction.begin();
-            Query query = session.createNativeQuery("UPDATE relative_data SET name=? WHERE personid=?");
-            query.setParameter(1, data.get("login").toString().replace("\"",""));
-            query.setParameter(2, data.get("password").toString().replace("\"",""));
-            List<FuneralServicesAccData> entries = query.getResultList();
-            transaction.commit();
-
-            if (entries.isEmpty()){
-            }
-            else{
-
-            }
-        } catch (RuntimeException exception) {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-            throw exception;
-        }catch (Exception e){
-            //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q
-            PrintStream printStream;
-            printStream = new PrintStream(System.out, true, StandardCharsets.UTF_8);
-            printStream.println(e);
-            throw e;
-        }
+//        try {
+//            transaction.begin();
+//            Query query = session.createNativeQuery("UPDATE relative_data SET name=? WHERE personid=?");
+//            query.setParameter(1, data.get("login").toString().replace("\"",""));
+//            query.setParameter(2, data.get("password").toString().replace("\"",""));
+//            List<FuneralServicesAccData> entries = query.getResultList();
+//            transaction.commit();
+//
+//            if (entries.isEmpty()){
+//            }
+//            else{
+//
+//            }
+//        } catch (RuntimeException exception) {
+//            if (transaction.isActive()) {
+//                transaction.rollback();
+//            }
+//            throw exception;
+//        }catch (Exception e){
+//            //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q
+//            PrintStream printStream;
+//            printStream = new PrintStream(System.out, true, StandardCharsets.UTF_8);
+//            printStream.println(e);
+//            throw e;
+//        }
     }
 }
