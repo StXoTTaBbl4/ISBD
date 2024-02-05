@@ -5,11 +5,23 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "relative_data")
 public class RelativeData {
+    public RelativeData() {
+    }
+
+    public RelativeData(Integer personId, String name, String secondName, String phoneNumber, String passportId, String address, Integer toWhomId) {
+        this.personId = personId;
+        this.name = name;
+        this.secondName = secondName;
+        this.phoneNumber = phoneNumber;
+        this.passportId = passportId;
+        this.address = address;
+        this.toWhomId = toWhomId;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "personID")
-    private Long personId;
+    private Integer personId;
 
     @Column(name = "name", nullable = false, length = 32)
     private String name;
@@ -28,8 +40,6 @@ public class RelativeData {
 
     @Column(name = "to_whom_ID", nullable = false)
     private Integer toWhomId;
-
-    // геттеры и сеттеры
 
 }
 

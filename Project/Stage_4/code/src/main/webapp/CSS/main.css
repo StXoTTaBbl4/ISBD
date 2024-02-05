@@ -39,7 +39,7 @@ header{
     width: 80%;
     height: 100%;
 }
-#available-info-header{
+#available-info-header, #sidebar-header{
     text-align: center;
     font-family: Tahoma, serif;
     font-size: 35px;
@@ -51,12 +51,14 @@ header{
 }
 #available-info-body{
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 .available-info-personal{
     font-size: 30px;
     border: thin none #D74632;
     border-bottom-style: solid;
+    color: whitesmoke;
+
 }
 #sidebar{
     float: left; /* add this */

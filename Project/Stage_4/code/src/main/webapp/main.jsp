@@ -6,13 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИСБД</title>
     <link href="CSS/main.css" rel="stylesheet" type="text/css"/>
+    <link href="CSS/buttons.css" rel="stylesheet" type="text/css"/>
+    <title>ИСБД</title>
 </head>
 <body>
     <header>
         <a id="header-name">
-        Сайт морга
+            Morgue website
         </a>
         <br>
         <a id="header-time">
@@ -24,22 +25,21 @@
     <div id="wrapper">
         <div id="available-info">
             <div id="available-info-header">
-                Доступные для вас записи:
+                Your data:
             </div>
             <div id="available-info-body">
-                <div class="available-info-personal">
-                    <span>Имя:</span>
-                    <span>Фамилия:</span>
-                    <span>Паспорт:</span>
-                </div>
+
             </div>
+            <button id="available-info-change-button" class="button">Change</button>
         </div>
-        <div id="sidebar">123</div>
+        <div id="sidebar">
+            <div id="sidebar-header">
+                Menu
+            </div>
+
+
+        </div>
     </div>
-<span id="search-button"></span>
-<span id="account-button"></span>
-
-
 </body>
 <script src="JS/jquery-3.7.1.min.js"></script>
 <script src="JS/main.js"></script>
