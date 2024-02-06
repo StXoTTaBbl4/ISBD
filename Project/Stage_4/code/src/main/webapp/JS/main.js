@@ -14,8 +14,8 @@ $('#sidebar-button-logout').on('click', function (){
 });
 
 $('#available-info-change-button').on('click', function () {
-    $('#available-info-change-button').hide()
-    $('#available-info-save-button').show()
+    $('#available-info-change-button').hide();
+    $('#available-info-save-button').show();
     $('#available-info-body').html("")
     for (let i = 1; i <= 5; i++) {
         let Enter;
