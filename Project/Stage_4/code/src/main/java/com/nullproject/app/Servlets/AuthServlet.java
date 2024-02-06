@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.nullproject.app.Entries.FuneralServicesAccData;
 import com.nullproject.app.hibernate.HibernateUtil;
+import com.nullproject.app.utility.JSONParser;
 import jakarta.persistence.Query;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,23 +19,17 @@ import java.util.List;
 @WebServlet(name = "authServlet", value = "/auth-servlet")
 public class AuthServlet extends HttpServlet {
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.setContentType("text/html");
 
         HibernateUtil hibernateUtil = new HibernateUtil();
         hibernateUtil.connection();
         Session session = hibernateUtil.session();
         Transaction transaction = hibernateUtil.transaction();
 
-        StringBuilder buffer = new StringBuilder();
-        BufferedReader reader = request.getReader();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            buffer.append(line);
-            buffer.append(System.lineSeparator());
-        }
-        JsonObject data = JsonParser.parseString(buffer.toString()).getAsJsonObject();
-        System.out.println(data);
+
+        JsonObject data = JSONParser.fromJSON(req);
+//        System.out.println(data);
 
 
         try {
@@ -50,11 +45,11 @@ public class AuthServlet extends HttpServlet {
                 System.out.println(f.toString());
             }
             if (entries.isEmpty()){
-                response.sendError(404);
+                resp.sendError(404);
             }
             else{
-                response.setContentType("text/html");
-                response.getWriter().println(entries.get(0).person_id());
+                resp.setContentType("text/html");
+                resp.getWriter().println(entries.get(0).person_id());
             }
         } catch (RuntimeException exception) {
             if (transaction.isActive()) {

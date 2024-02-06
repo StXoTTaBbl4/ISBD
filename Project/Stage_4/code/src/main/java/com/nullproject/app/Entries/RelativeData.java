@@ -41,5 +41,7 @@ public class RelativeData {
     @Column(name = "to_whom_ID", nullable = false)
     private Integer toWhomId;
 
+
+
 }
 

@@ -29,6 +29,7 @@
             </div>
             <div id="available-info-body"></div>
             <button id="available-info-change-button" class="button">Change</button>
+            <button id="available-info-save-button" class="button" hidden>Save</button>
         </div>
         <div id="sidebar">
             <div id="sidebar-header">
@@ -38,6 +39,7 @@
                 <button id="sidebar-button-info" class="button sidebar-button">Info</button><br>
                 <button id="sidebar-button-address" class="button sidebar-button">Addresses</button><br>
                 <button id="sidebar-button-employers" class="button sidebar-button">Workers</button>
+                <button id="sidebar-button-logout" class="button sidebar-button">Logout</button>
             </div>
         </div>
     </div>

@@ -7,9 +7,12 @@
     <session-factory>
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:7613/studs</property>
-        <property name="hibernate.connection.username">s262512</property>
-        <property name="hibernate.connection.password">8IhU41HR5USTTePn</property>
+<!--        <property name="hibernate.connection.url">jdbc:postgresql://localhost:7613/studs</property>-->
+<!--        <property name="hibernate.connection.username">s262512</property>-->
+<!--        <property name="hibernate.connection.password">8IhU41HR5USTTePn</property>-->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Ltvjys!1</property>
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- Print executed SQL to stdout -->

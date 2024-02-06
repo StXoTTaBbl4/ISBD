@@ -74,7 +74,8 @@ id_of_facility INTEGER NOT NULL
 
 CREATE TABLE funeral_services_acc_data(ID SERIAL PRIMARY KEY,
 login VARCHAR(64) NOT NULL,
-password TEXT NOT NULL
+password TEXT NOT NULL,
+personid INTEGER NOT NULL
 );
 
 CREATE TABLE graveyard_info(ID SERIAL PRIMARY KEY,

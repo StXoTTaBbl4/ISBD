@@ -61,9 +61,10 @@ header{
 
 }
 #sidebar{
-    float: left; /* add this */
-    width: 19%;
+    float: right; /* add this */
+    width: 20%;
     height: 100%;
+    box-sizing: border-box;
     border: thin none black;
     border-left-style: solid;
 }
