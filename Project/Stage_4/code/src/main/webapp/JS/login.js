@@ -33,7 +33,3 @@ $('#login-button').on('click', function (){
     });
 });
 
-$('#available-info-change-button').on('click', function (){
-
-})
-

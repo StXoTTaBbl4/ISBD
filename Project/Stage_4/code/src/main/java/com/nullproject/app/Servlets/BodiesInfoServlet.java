@@ -61,27 +61,23 @@ public class BodiesInfoServlet extends HttpServlet {
         Transaction transaction = hibernateUtil.transaction();
 
         JsonObject data = JSONParser.fromJSON(req);
-
+        System.out.println(data.toString());
         try {
             transaction.begin();
             Query query = session.createNativeQuery("UPDATE relative_data SET name=?, second_name=?, phone_number=?,passport_id=?, address=? WHERE personid=?");
             query.setParameter(1, data.get("name").toString().replace("\"",""));
-            query.setParameter(2, data.get("second_name").toString().replace("\"",""));
-            query.setParameter(3, data.get("phone_number").toString().replace("\"",""));
-            query.setParameter(4, data.get("passport_id").toString().replace("\"",""));
+            query.setParameter(2, data.get("secondName").toString().replace("\"",""));
+            query.setParameter(3, data.get("phoneNumber").toString().replace("\"",""));
+            query.setParameter(4, data.get("passportId").toString().replace("\"",""));
             query.setParameter(5, data.get("address").toString().replace("\"",""));
-            List<FuneralServicesAccData> entries = query.getResultList();
+            query.setParameter(6, Integer.parseInt(data.get("personId").toString().replace("\"","")));
+            query.executeUpdate();
             transaction.commit();
-
-            if (entries.isEmpty()){
-            }
-            else{
-
-            }
         } catch (RuntimeException exception) {
             if (transaction.isActive()) {
                 transaction.rollback();
             }
+            resp.sendError(500);
             throw exception;
         }catch (Exception e){
             //Потому что иначе вместо ошибок ДБ выдает $%!@*$%!^(#&%Q

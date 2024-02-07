@@ -52,14 +52,17 @@ header{
 #available-info-body{
     width: 100%;
     height: fit-content;
-}
-.available-info-personal{
     font-size: 30px;
     border: thin none #D74632;
     border-bottom-style: solid;
     color: whitesmoke;
-
 }
+/*.available-info{*/
+/*    font-size: 30px;*/
+/*    border: thin none #D74632;*/
+/*    border-bottom-style: solid;*/
+/*    color: whitesmoke;*/
+/*}*/
 #sidebar{
     float: right; /* add this */
     width: 20%;

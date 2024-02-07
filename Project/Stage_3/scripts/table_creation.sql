@@ -21,7 +21,7 @@ body_id INTEGER NOT NULL,
 note TEXT,
 pathologist_1_id INTEGER NOT NULL, 
 pathologist_2_id INTEGER NOT NULL,
-intern_id INTEGER
+intern_id INTEGER DEFAULT NULL
 );
 
 CREATE TABLE relative_data (personID SERIAL PRIMARY KEY,
