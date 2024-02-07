@@ -27,10 +27,8 @@ public class AuthServlet extends HttpServlet {
         Session session = hibernateUtil.session();
         Transaction transaction = hibernateUtil.transaction();
 
-
         JsonObject data = JSONParser.fromJSON(req);
 //        System.out.println(data);
-
 
         try {
             transaction.begin();
@@ -40,10 +38,6 @@ public class AuthServlet extends HttpServlet {
 
             List<FuneralServicesAccData> entries = query.getResultList();
             transaction.commit();
-            for (FuneralServicesAccData f: entries
-                 ) {
-                System.out.println(f.toString());
-            }
             if (entries.isEmpty()){
                 resp.sendError(404);
             }

@@ -54,7 +54,7 @@ VALUES
 (4, 'Brown Family Clinic', '567 Pine Ln', '555-4321', 'Medical records required'),
 (5, 'Wilson Insurance Agency', '876 Cedar Dr', '555-8765', 'Insurance claim processing');
 
-INSERT INTO body_reciving (facility_address, receiving_date, receiver_name, receiver_second_name, receiver_ID, receiver_phone_number, body_treatment_type, graveyard_order_ID)
+INSERT INTO body_receiving(facility_address, receiving_date, receiver_name, receiver_second_name, receiver_ID, receiver_phone_number, body_treatment_type, graveyard_order_ID)
 VALUES
 ('Hospital A', '2024-01-09 10:30:00', 'Olivia', 'Davis', 1, '777-888-9999', 'Autopsy', 1),
 ('Clinic B', '2024-01-09 12:15:00', 'Daniel', 'Williams', 2, '333-999-8888', 'Burial', 2),

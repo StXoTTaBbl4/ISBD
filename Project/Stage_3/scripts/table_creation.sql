@@ -47,7 +47,7 @@ contact_info TEXT,
 note TEXT
 );
 
-CREATE TABLE body_reciving(ID SERIAL PRIMARY KEY,
+CREATE TABLE body_receiving(ID SERIAL PRIMARY KEY,
 facility_address VARCHAR(64) NOT NULL,
 receiving_date TIMESTAMP NOT NULL,
 receiver_name VARCHAR(32),
